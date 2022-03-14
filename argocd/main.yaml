@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: my-apps
 spec:
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
   destination:
     namespace: default
     server: 'https://kubernetes.default.svc'
